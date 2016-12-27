@@ -1,0 +1,18 @@
+<h1 class="text-center">Your Favorite Pokemon</h1>
+
+<% pokemons.forEach(function(pokemon){ %>
+    <div class="row">
+        <div class="col-xs-12 text-center white">
+        <p>
+            <%= pokemon.name %>
+        </p>
+            <a href="/pokemon/<%= pokemon.id %>" class="delete-link btn btn-warning">DELETE</a>
+            </p>
+
+        </div>
+    </div>
+<% }) %>
+
+<form action="/">
+    <input type="submit" value="Back to List" />
+</form>
