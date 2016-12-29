@@ -1,0 +1,11 @@
+<h1 class="text-center"><%= pokemon %> stats</h1>
+<img class="img-responsive center-block" src="<%=sprite.front_default%>" alt="">
+
+<p class ="text-center"><%=height%> cm</p>
+<p class ="text-center"><%=weight%> kg</p>
+    <%for (i = 0; i<stats.length; i++) { %>
+        <p class="text-center"><%=stats[i].stat.name%>: <%=stats[i].base_stat;%></p>
+    <%}%>
+    <form action="/pokemon">
+        <input type="submit" value="Back to Your Favorites" />
+    </form>
