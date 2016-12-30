@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
     });
 });
 
+//grab details for a pokemon and then pass that to a page to render
 router.get('/details/:name', function(req, res){
     var pokemon = req.params.name;
     var pokemonDetail = "http://pokeapi.co/api/v2/pokemon/" +pokemon;
