@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
     });
 });
 
-router.get('/detail/:name', function(req, res){
+router.get('/details/:name', function(req, res){
     var pokemon = req.params.name;
     var pokemonDetail = "http://pokeapi.co/api/v2/pokemon/" +pokemon;
     request(pokemonDetail, function(error, response, body) {
@@ -21,11 +21,6 @@ router.get('/detail/:name', function(req, res){
         res.render('details', {pokemon: pokemon,stats: stats,sprite: sprite,height: height,weight: weight});
     });
 
-});
-
-router.get('/details/:name', function(req,res){
-    console.log("details/name request "+req);
-    res.render('details');
 });
 
 // POST - receive the name of a pokemon and add it to the database
