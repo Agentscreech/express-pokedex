@@ -26,3 +26,9 @@ app.use('/pokemon', require('./routes/pokemon'));
 var server = app.listen(process.env.PORT || 3000);
 
 module.exports = server;
+
+
+//not found error handler
+app.use(function (req, res, next) {
+  res.status(404).render('error')
+});
